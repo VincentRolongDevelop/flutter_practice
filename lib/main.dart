@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+} 
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,26 +11,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "App",
-      home: Home(),
+      home: startHome(),
     );
   }
 }
 
-class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+
+class startHome extends StatefulWidget {
+  const startHome({super.key});
 
   @override
-  _HomeState createState() => _HomeState();
+  State<startHome> createState() => _startHomeState();
 }
 
-class _HomeState extends State<Home> {
-  @override
+class _startHomeState extends State<startHome> {
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("My App"),
-      ),
-      body: Center(child: Text("Content"),)
-    );
+        appBar: AppBar(
+          title: Text("My App"),
+        ),
+        body: Center(
+          child: Text("Content"),
+        ));
   }
 }
